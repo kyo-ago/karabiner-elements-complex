@@ -1,5 +1,6 @@
 import { Manipulator } from "../make_rules";
-import { parse_shortcut } from "./parse_shortcut";
+import { parse_shortcut } from "./libs/parse_shortcut";
+import { remove_property } from "./libs/remove_property";
 
 export interface FromModifier {
     key_code: string;
@@ -43,11 +44,10 @@ export function fromModifier(
     return result;
 }
 
-export function from(manip: Manipulator): Manipulator {
-    if (!manip[":from"]) {
+export const from = remove_property(
+    ":from",
+    (manip: Manipulator, prop: string): Manipulator => {
+        manip.from = fromModifier(manip.from, prop);
         return manip;
     }
-    manip.from = fromModifier(manip.from, manip[":from"]);
-    delete manip[":from"];
-    return manip;
-}
+);

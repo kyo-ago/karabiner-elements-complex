@@ -1,12 +1,8 @@
-import { Manipulator } from "../make_rules";
+import { ComplexModificationRule } from "../make_rules";
 
-export interface Rule {
-    description: string;
-    ":manipulators"?: Manipulator | Manipulator[];
-    manipulators: Manipulator[];
-}
-
-export function make_rule(rule: Rule): Rule {
+export function make_rule(
+    rule: ComplexModificationRule
+): ComplexModificationRule {
     if (rule[":manipulators"]) {
         rule.manipulators = (rule.manipulators || []).concat(
             rule[":manipulators"]

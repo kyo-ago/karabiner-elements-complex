@@ -1,4 +1,5 @@
-import { Manipulator, ManipulatorConditions } from "../make_rules";
+import { ManipulatorConditions } from "../make_rules";
+import { condition_map } from "./libs/condition_map";
 
 let conditionAppMap = {
     browsers: [
@@ -26,13 +27,4 @@ let toConditionApp = (condition: string): ManipulatorConditions => {
     throw new Error(`Unknown ConditionAppMap "${condition}"`);
 };
 
-export function app(manip: Manipulator): Manipulator {
-    if (!manip[":app"]) {
-        return manip;
-    }
-    manip.conditions = (manip.conditions || []).concat(
-        toConditionApp(manip[":app"])
-    );
-    delete manip[":app"];
-    return manip;
-}
+export const app = condition_map(":app", toConditionApp);

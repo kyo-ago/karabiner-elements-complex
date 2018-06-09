@@ -1,4 +1,5 @@
-import { Manipulator, ManipulatorConditions } from "../make_rules";
+import { ManipulatorConditions } from "../make_rules";
+import { condition_map } from "./libs/condition_map";
 
 export interface DeviceIdentifiers {
     vendor_id: number;
@@ -35,13 +36,4 @@ let toConditionDevice = (condition): ManipulatorConditions => {
     throw new Error(`Unknown ConditionDevice "${condition}"`);
 };
 
-export function device(manip: Manipulator): Manipulator {
-    if (!manip[":device"]) {
-        return manip;
-    }
-    manip.conditions = (manip.conditions || []).concat(
-        toConditionDevice(manip[":device"])
-    );
-    delete manip[":device"];
-    return manip;
-}
+export const device = condition_map(":device", toConditionDevice);

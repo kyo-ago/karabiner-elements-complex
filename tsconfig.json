@@ -2,12 +2,11 @@
     "compilerOptions": {
         "target": "es6",
         "module": "CommonJS",
-        "rootDir": "./",
+        "rootDir": "./src",
         "sourceRoot": "./",
+        "outDir": "./dist",
         "inlineSourceMap": true,
         "inlineSources": true
     },
-    "files": [
-        "./src/index.ts"
-    ]
+    "files": ["./src/index.ts"]
 }

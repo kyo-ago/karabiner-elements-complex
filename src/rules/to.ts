@@ -1,5 +1,6 @@
 import { Manipulator } from "../make_rules";
-import { parse_shortcut } from "./parse_shortcut";
+import { parse_shortcut } from "./libs/parse_shortcut";
+import { remove_property } from "./libs/remove_property";
 
 let toModifierMap: {
     [key: string]: {
@@ -104,12 +105,10 @@ export function toModifier(
     return (base || []).concat(results);
 }
 
-export function to(manip: Manipulator): Manipulator {
-    let short = manip[":to"];
-    if (!short) {
+export const to = remove_property(
+    ":to",
+    (manip: Manipulator, prop: string): Manipulator => {
+        manip.to = toModifier(manip.to, prop);
         return manip;
     }
-    manip.to = toModifier(manip.to, short);
-    delete manip[":to"];
-    return manip;
-}
+);

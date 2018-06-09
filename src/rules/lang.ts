@@ -1,4 +1,5 @@
 import { ManipulatorConditions } from "../make_rules";
+import { condition_map } from "./libs/condition_map";
 
 export interface LangInputSources {
     language: string;
@@ -9,13 +10,4 @@ let toConditionLanguage = (lang: string): ManipulatorConditions => ({
     input_sources: [{ language: lang }],
 });
 
-export function lang(manip) {
-    if (!manip[":lang"]) {
-        return manip;
-    }
-    manip.conditions = (manip.conditions || []).concat(
-        toConditionLanguage(manip[":lang"])
-    );
-    delete manip[":lang"];
-    return manip;
-}
+export const lang = condition_map(":lang", toConditionLanguage);

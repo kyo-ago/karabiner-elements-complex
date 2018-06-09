@@ -1,15 +1,25 @@
-import { Rule } from "./rules/make_rule";
+import * as fs from "fs";
+import { ComplexModificationRule } from "./make_rules";
 
-let fs = require("fs");
+interface KarabinerJsonProfile {
+    selected: boolean;
+    complex_modifications: {
+        rules: ComplexModificationRule[];
+    };
+}
 
-export function write_rules(rules: Rule[]) {
+interface KarabinerJson {
+    profiles: KarabinerJsonProfile[];
+}
+
+export function write_rules(rules: ComplexModificationRule[]) {
     let karabinerJsonPath = `${
         process.env.HOME
     }/.config/karabiner/karabiner.json`;
-    let karabinerJson = require(karabinerJsonPath);
+    let karabinerJson: KarabinerJson = require(karabinerJsonPath);
     karabinerJson.profiles
         .filter(profile => profile.selected)
-        .forEach(profile => (profile.complex_modifications.make_rule = rules));
+        .forEach(profile => (profile.complex_modifications.rules = rules));
     fs.writeFileSync(
         karabinerJsonPath,
         JSON.stringify(karabinerJson, null, "  ")

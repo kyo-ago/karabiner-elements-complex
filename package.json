@@ -1,5 +1,6 @@
 {
   "name": "@kyo-ago/karabiner-elements-complex",
+  "description": "karabiner-elements complex_modifications manager",
   "version": "1.0.0",
   "author": "kyo_ago",
   "dependencies": {
@@ -13,7 +14,11 @@
     "mocha": "^5.2.0",
     "power-assert": "^1.5.0",
     "prettier": "^1.13.4",
-    "typescript": "^2.9.1"
+    "ts-loader": "^4.4.1",
+    "typescript": "^2.9.1",
+    "webpack": "^4.12.0",
+    "webpack-command": "^0.2.1",
+    "webpack-node-externals": "^1.7.2"
   },
   "directories": {
     "test": "src/"
@@ -21,7 +26,7 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "webpack --config webpack.config.js",
     "prettier": "prettier --tab-width 4 --trailing-comma --write 'src/**/*.ts' 'tsconfig.json'",
     "test": "mocha --require espower-typescript/guess 'src/**/*.spec.ts'"
   }

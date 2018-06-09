@@ -1,0 +1,8 @@
+{
+  "description": "ctrl-1 to Find in Path...",
+  ":app": "jetbrains",
+  ":manipulators": [
+    "com-1:shift-com-f",
+    "com-o:ctrl-opt-o",
+  ]
+}

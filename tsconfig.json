@@ -5,8 +5,6 @@
         "rootDir": "./src",
         "sourceRoot": "./",
         "outDir": "./dist",
-        "inlineSourceMap": true,
-        "inlineSources": true
-    },
-    "files": ["./src/index.ts"]
+        "sourceMap": true
+    }
 }

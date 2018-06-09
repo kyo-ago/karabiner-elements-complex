@@ -6,5 +6,18 @@ import { write_rules } from "./write_rules";
 SourceMapSupport.install();
 
 let files = read_complex_modifications(__dirname);
+if (!files.length) {
+    console.error("missing setting json files");
+    process.exit(1);
+}
+
 let rules = read_rules(files);
-write_rules(rules);
+
+if (~process.argv.indexOf("--update")) {
+    write_rules(rules);
+} else {
+    console.log({
+        title: "private settings",
+        rules: rules,
+    });
+}

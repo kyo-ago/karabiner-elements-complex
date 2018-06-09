@@ -1,0 +1,52 @@
+[
+  {
+    "description": "browsers",
+    ":app": "browsers",
+    ":manipulators": [
+      "com-q:opt-com-left_arrow",
+      "com-e:opt-com-right_arrow",
+      "com-b:com-open_bracket",
+      "cmd-s:cmd-r"
+    ]
+  },
+  {
+    "description": "jetbrains",
+    ":app": "jetbrains",
+    ":manipulators": [
+      "com-q:shift-com-open_bracket",
+      "com-e:shift-com-close_bracket"
+    ]
+  },
+  {
+    "description": "ctrl-D",
+    ":manipulators": {
+      ":com-d": "delete_forward"
+    }
+  },
+  {
+    "description": "ctrl-2 (only for chrome devtools source panel)",
+    ":manipulators": {
+      ":app": "chrome",
+      ":cmd-2": "cmd-s"
+    }
+  },
+  {
+    "description": "ctrl-arrow",
+    ":manipulators": [
+      "*-cmd-left_arrow:opt-left_arrow",
+      "*-cmd-right_arrow:opt-right_arrow",
+      "*-cmd-up_arrow:page_up",
+      "*-cmd-down_arrow:page_down"
+    ]
+  },
+  {
+    "description": "arrow-key",
+    ":manipulators": [
+      "*-cmd-j:left_arrow",
+      "*-cmd-k:up_arrow",
+      "*-cmd-l:down_arrow",
+      "*-cmd-semicolon:right_arrow",
+      "*-cmd-quote:return_or_enter"
+    ]
+  }
+]

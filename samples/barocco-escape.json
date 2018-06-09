@@ -1,0 +1,13 @@
+{
+  "description": "barocco rules",
+  ":device": "barocco",
+  ":manipulators": [
+    "com-escape:grave_accent_and_tilde",
+    "shift-escape:shift-grave_accent_and_tilde",
+    "*-backslash:delete_or_backspace",
+    "*-delete_or_backspace:backslash",
+    "left_gui:left_alt",
+    "left_alt:japanese_eisuu",
+    "right_alt:japanese_kana"
+  ]
+}

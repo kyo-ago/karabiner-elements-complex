@@ -1,0 +1,16 @@
+[
+  {
+    "description": "caps_lock",
+    ":manipulators": [
+      "*-caps_lock:left_gui"
+    ]
+  },
+  {
+    "description": "半角全角",
+    ":device": "!barocco",
+    ":manipulators": [
+      "right_gui:japanese_kana",
+      "left_gui:japanese_eisuu"
+    ]
+  }
+]

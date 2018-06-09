@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "CommonJS",
+        "rootDir": "./",
+        "sourceRoot": "./",
+        "inlineSourceMap": true,
+        "inlineSources": true
+    },
+    "files": [
+        "./src/index.ts"
+    ]
+}

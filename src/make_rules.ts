@@ -1,12 +1,11 @@
-import { app } from "./rules/app";
-import { device, DeviceIdentifiers } from "./rules/device";
-import { from, FromModifier } from "./rules/from";
-import { lang, LangInputSources } from "./rules/lang";
+import { json_to_rule } from "./json_to_rule";
+import { map_rule } from "./map_rule";
+import { ComplexModificationFile } from "./read_complex_modifications";
+import { DeviceIdentifiers } from "./rules/device";
+import { FromModifier } from "./rules/from";
+import { LangInputSources } from "./rules/lang";
 import { make_rule } from "./rules/make_rule";
-import { pear } from "./rules/pear";
-import { string_shortcut } from "./rules/string_shortcut";
-import { to, ToModifier } from "./rules/to";
-import { type_basic } from "./rules/type_basic";
+import { ToModifier } from "./rules/to";
 
 export interface ManipulatorConditions {
     type: string;
@@ -28,24 +27,30 @@ export interface Manipulator {
 }
 
 export interface ComplexModificationRule {
-    description: string;
+    description?: string;
     manipulators?: Manipulator[];
     ":manipulators"?: Manipulator | Manipulator[];
+    ":only"?: boolean;
 }
 
-export function make_rules(text: string): ComplexModificationRule[] {
-    let json: { rules: any[] } | any[] | any = eval(`(${text})`);
-    return (json.rules || (json.length ? json : [json]))
-        .map(make_rule)
-        .map(rule =>
-            rule.manipulators
-                .map(string_shortcut)
-                .map(type_basic)
-                .map(app)
-                .map(device)
-                .map(lang)
-                .map(from)
-                .map(to)
-                .map(pear)
-        );
+export function make_rules(
+    file: ComplexModificationFile
+): {
+    only: boolean;
+    rules: ComplexModificationRule[];
+} {
+    let json = eval(`(${file.textContent})`);
+    let rules = json_to_rule(json).map(rule => make_rule(rule));
+    let only = false;
+    if (rules.find(rule => rule[":only"])) {
+        only = true;
+        rules = rules.filter(rule => rule[":only"]).map(rule => {
+            delete rule[":only"];
+            return rule;
+        });
+    }
+    return {
+        only: only,
+        rules: rules.map(rule => map_rule(rule, file.fileName)),
+    };
 }

@@ -16,7 +16,9 @@ export function write_rules(rules: ComplexModificationRule[]) {
     let karabinerJsonPath = `${
         process.env.HOME
     }/.config/karabiner/karabiner.json`;
-    let karabinerJson: KarabinerJson = require(karabinerJsonPath);
+    let karabinerJson: KarabinerJson = eval(
+        `(${fs.readFileSync(karabinerJsonPath)})`
+    );
     karabinerJson.profiles
         .filter(profile => profile.selected)
         .forEach(profile => (profile.complex_modifications.rules = rules));

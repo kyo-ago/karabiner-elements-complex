@@ -5,7 +5,11 @@ import { write_rules } from "./write_rules";
 
 SourceMapSupport.install();
 
-let files = read_complex_modifications(__dirname);
+let files = read_complex_modifications(
+    ~process.argv.indexOf("--json")
+        ? process.argv[process.argv.indexOf("--json") + 1]
+        : __dirname
+);
 if (!files.length) {
     console.error("missing setting json files");
     process.exit(1);

@@ -11,7 +11,7 @@ let conditionAppMap = {
     jetbrains: ["^com\\.jetbrains\\."],
 };
 
-let toConditionApp = (condition: string): ManipulatorConditions => {
+export const app = condition_map(":app", (condition: string): ManipulatorConditions => {
     if (conditionAppMap[condition]) {
         return {
             type: "frontmost_application_if",
@@ -25,6 +25,4 @@ let toConditionApp = (condition: string): ManipulatorConditions => {
         };
     }
     throw new Error(`Unknown ConditionAppMap "${condition}"`);
-};
-
-export const app = condition_map(":app", toConditionApp);
+});

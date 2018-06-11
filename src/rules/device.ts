@@ -17,7 +17,7 @@ let conditionDeviceMap = {
     },
 };
 
-let toConditionDevice = (condition): ManipulatorConditions => {
+export const device = condition_map(":device", (condition): ManipulatorConditions => {
     if (conditionDeviceMap[condition]) {
         return {
             type: "device_if",
@@ -34,6 +34,4 @@ let toConditionDevice = (condition): ManipulatorConditions => {
         };
     }
     throw new Error(`Unknown ConditionDevice "${condition}"`);
-};
-
-export const device = condition_map(":device", toConditionDevice);
+});

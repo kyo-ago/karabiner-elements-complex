@@ -51,7 +51,15 @@ let toModifierMap: {
     "=": {
         key: "equal_sign",
     },
+    ";": {
+        key: "semicolon",
+    },
+    ":": {
+        key: "semicolon",
+        mod: "shift",
+    },
 };
+
 
 export interface ToModifier {
     key_code: string;

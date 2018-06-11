@@ -23,6 +23,7 @@ export interface Manipulator {
     ":from"?: string;
     ":to"?: string;
     ":app"?: string;
+    ":device"?: string;
     ":lang"?: string;
 }
 

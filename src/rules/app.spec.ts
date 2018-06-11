@@ -8,5 +8,6 @@ describe("app", () => {
             app({ ":app": "browsers" }).conditions[0].bundle_identifiers.length
         );
         assert(!(":app" in app({ ":app": "browsers" })));
+        assert(app({ ":app": "browsers", conditions: [{type: ""}] }).conditions.length === 2);
     });
 });

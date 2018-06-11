@@ -10,5 +10,5 @@
   "cmd-shift-j:japanese_eisuu,'javascript'",
   "cmd-shift-t:japanese_eisuu,'this.'",
   "cmd-shift-a:japanese_eisuu,'arguments'",
-  "cmd-shift-v:japanese_eisuu,'const '",
+  "cmd-shift-v:japanese_eisuu,': void'",
 ]

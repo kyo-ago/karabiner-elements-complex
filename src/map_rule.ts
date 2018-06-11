@@ -1,4 +1,4 @@
-import { ComplexModificationRule } from "./make_rules";
+import { ComplexModificationRule, Manipulator } from "./make_rules";
 import { app } from "./rules/app";
 import { device } from "./rules/device";
 import { from } from "./rules/from";
@@ -13,10 +13,11 @@ export function map_rule(
     json: ComplexModificationRule,
     fileName: string
 ): ComplexModificationRule {
-    let result = set_attrs(json);
-    result.description = result.description || fileName.replace(/\.\w+/, "");
-    result.manipulators = result.manipulators
+    let {rule, attr} = set_attrs(json);
+    rule.description = rule.description || fileName.replace(/\.\w+/, "");
+    rule.manipulators = rule.manipulators
         .map(string_shortcut)
+        .map((manip: Manipulator): Manipulator => Object.assign({}, manip, attr))
         .map(type_basic)
         .map(app)
         .map(device)
@@ -24,5 +25,5 @@ export function map_rule(
         .map(from)
         .map(to)
         .map(pear);
-    return result;
+    return rule;
 }

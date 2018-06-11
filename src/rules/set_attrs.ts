@@ -2,7 +2,10 @@ import { ComplexModificationRule } from "../make_rules";
 
 export function set_attrs(
     rule: ComplexModificationRule
-): ComplexModificationRule {
+): {
+    rule: ComplexModificationRule,
+    attr: any;
+} {
     let attrs = Object.keys(rule)
         .filter(key => key.match(/^:/))
         .filter(key => "string" === typeof rule[key])
@@ -11,8 +14,8 @@ export function set_attrs(
             delete rule[cur];
             return base;
         }, {});
-    rule.manipulators = rule.manipulators.map(manip =>
-        Object.assign({}, manip, attrs)
-    );
-    return rule;
+    return {
+        rule: rule,
+        attr: attrs,
+    };
 }

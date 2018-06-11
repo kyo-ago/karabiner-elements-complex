@@ -194,3 +194,13 @@ $ head *.json
 ...
 $ node --update index.js # update karabiner-elements setting
 ```
+
+# Options
+
+## --json
+
+
+
+## --update
+
+update karabiner-elements selected setting.(`~/.config/karabiner/karabiner.json`)

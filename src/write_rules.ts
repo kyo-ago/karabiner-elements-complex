@@ -1,5 +1,5 @@
 import * as fs from "fs";
-import { ComplexModificationRule } from "./make_rules";
+import { ComplexModificationRule } from "./rules/make_rules";
 
 interface KarabinerJsonProfile {
     selected: boolean;

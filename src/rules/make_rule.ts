@@ -1,4 +1,4 @@
-import { ComplexModificationRule } from "../make_rules";
+import { ComplexModificationRule } from "./make_rules";
 
 export function make_rule(rule: any): ComplexModificationRule {
     if (rule.length) {

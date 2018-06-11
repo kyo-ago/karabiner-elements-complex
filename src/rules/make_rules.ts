@@ -1,11 +1,11 @@
+import { ComplexModificationFile } from "../read_complex_modifications";
 import { json_to_rule } from "./json_to_rule";
+import { make_rule } from "./make_rule";
 import { map_rule } from "./map_rule";
-import { ComplexModificationFile } from "./read_complex_modifications";
-import { DeviceIdentifiers } from "./rules/device";
-import { FromModifier } from "./rules/from";
-import { LangInputSources } from "./rules/lang";
-import { make_rule } from "./rules/make_rule";
-import { ToModifier } from "./rules/to";
+import { DeviceIdentifiers } from "./rule/device";
+import { FromModifier } from "./rule/from";
+import { LangInputSources } from "./rule/lang";
+import { ToModifier } from "./rule/to";
 
 export interface ManipulatorConditions {
     type: string;
@@ -34,12 +34,14 @@ export interface ComplexModificationRule {
     ":only"?: boolean;
 }
 
-export function make_rules(
-    file: ComplexModificationFile
-): {
+export interface ComplexModificationRuleSet {
     only: boolean;
     rules: ComplexModificationRule[];
-} {
+}
+
+export function make_rules(
+    file: ComplexModificationFile
+): ComplexModificationRuleSet {
     let json = eval(`(${file.textContent})`);
     let rules = json_to_rule(json).map(rule => make_rule(rule));
     let only = false;

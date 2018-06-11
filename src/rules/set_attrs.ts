@@ -1,9 +1,9 @@
-import { ComplexModificationRule } from "../make_rules";
+import { ComplexModificationRule } from "./make_rules";
 
 export function set_attrs(
     rule: ComplexModificationRule
 ): {
-    rule: ComplexModificationRule,
+    rule: ComplexModificationRule;
     attr: any;
 } {
     let attrs = Object.keys(rule)

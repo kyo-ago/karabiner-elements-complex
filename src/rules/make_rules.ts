@@ -1,8 +1,6 @@
-import { ComplexModificationFile } from "../read_complex_modifications";
 import { json_to_rule } from "./json_to_rule";
 import { make_rule } from "./make_rule";
 import { make_rule_set } from "./make_rule_set";
-import { map_rule } from "./map_rule";
 import { DeviceIdentifiers } from "./rule/device";
 import { FromModifier } from "./rule/from";
 import { LangInputSources } from "./rule/lang";

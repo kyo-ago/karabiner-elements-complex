@@ -136,11 +136,14 @@ or
 </tbody>
 </table>
 
+See [samples](/tree/master/samples).
+
 # Installation
 
 ```
 $ brew install node
-$ wget ...
+$ wget https://raw.githubusercontent.com/kyo-ago/karabiner-elements-complex/master/index.js
+$ node index.js
 ```
 
 # Usage
@@ -199,8 +202,8 @@ $ node --update index.js # update karabiner-elements setting
 
 ## --json
 
+Target json dexirekutori path. (default `__dirname`)
 
+## --noUpdate
 
-## --update
-
-update karabiner-elements selected setting.(`~/.config/karabiner/karabiner.json`)
+Skip update karabiner-elements selected setting. (`~/.config/karabiner/karabiner.json`)

@@ -17,7 +17,7 @@ if (!files.length) {
 
 let rules = read_rules(files);
 
-if (~process.argv.indexOf("--update")) {
+if (!~process.argv.indexOf("--noUpdate")) {
     write_rules(rules);
 } else {
     console.log({

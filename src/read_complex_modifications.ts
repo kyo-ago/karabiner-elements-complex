@@ -11,6 +11,7 @@ export function read_complex_modifications(
     return fs
         .readdirSync(dirname)
         .filter(file => file.match(/\.json$/))
+        .filter(file => !file.match(/\.result\.json$/))
         .map(file => {
             let path = `${dirname}/${file}`;
             return {

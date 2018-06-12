@@ -17,7 +17,7 @@ export function write_rules(rules: ComplexModificationRule[]) {
         process.env.HOME
     }/.config/karabiner/karabiner.json`;
     let karabinerJson: KarabinerJson = eval(
-        `(${fs.readFileSync(karabinerJsonPath)})`
+        `(${fs.readFileSync(karabinerJsonPath, "utf-8")})`
     );
     karabinerJson.profiles
         .filter(profile => profile.selected)

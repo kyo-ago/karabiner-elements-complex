@@ -1,6 +1,7 @@
 import { ComplexModificationFile } from "../read_complex_modifications";
 import { json_to_rule } from "./json_to_rule";
 import { make_rule } from "./make_rule";
+import { make_rule_set } from "./make_rule_set";
 import { map_rule } from "./map_rule";
 import { DeviceIdentifiers } from "./rule/device";
 import { FromModifier } from "./rule/from";
@@ -39,21 +40,7 @@ export interface ComplexModificationRuleSet {
     rules: ComplexModificationRule[];
 }
 
-export function make_rules(
-    file: ComplexModificationFile
-): ComplexModificationRuleSet {
-    let json = eval(`(${file.textContent})`);
+export function make_rules(json: any): ComplexModificationRuleSet {
     let rules = json_to_rule(json).map(rule => make_rule(rule));
-    let only = false;
-    if (rules.find(rule => rule[":only"])) {
-        only = true;
-        rules = rules.filter(rule => rule[":only"]).map(rule => {
-            delete rule[":only"];
-            return rule;
-        });
-    }
-    return {
-        only: only,
-        rules: rules.map(rule => map_rule(rule, file.fileName)),
-    };
+    return make_rule_set(rules);
 }

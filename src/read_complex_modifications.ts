@@ -15,7 +15,7 @@ export function read_complex_modifications(
             let path = `${dirname}/${file}`;
             return {
                 fileName: file,
-                textContent: String(fs.readFileSync(path)),
+                textContent: fs.readFileSync(path, "utf-8"),
             };
         });
 }

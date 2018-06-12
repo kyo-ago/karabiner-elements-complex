@@ -1,0 +1,426 @@
+[
+    {
+        "description": "browsers",
+        "manipulators": [
+            {
+                "type": "basic",
+                "conditions": [
+                    {
+                        "type": "frontmost_application_if",
+                        "bundle_identifiers": [
+                            "^com\\.google\\.Chrome$",
+                            "^org\\.mozilla\\.firefox$",
+                            "^com\\.apple\\.Safari$"
+                        ]
+                    }
+                ],
+                "from": {
+                    "key_code": "q",
+                    "modifiers": {
+                        "mandatory": [
+                            "command"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "left_arrow",
+                        "modifiers": [
+                            "option",
+                            "command"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "conditions": [
+                    {
+                        "type": "frontmost_application_if",
+                        "bundle_identifiers": [
+                            "^com\\.google\\.Chrome$",
+                            "^org\\.mozilla\\.firefox$",
+                            "^com\\.apple\\.Safari$"
+                        ]
+                    }
+                ],
+                "from": {
+                    "key_code": "e",
+                    "modifiers": {
+                        "mandatory": [
+                            "command"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "right_arrow",
+                        "modifiers": [
+                            "option",
+                            "command"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "conditions": [
+                    {
+                        "type": "frontmost_application_if",
+                        "bundle_identifiers": [
+                            "^com\\.google\\.Chrome$",
+                            "^org\\.mozilla\\.firefox$",
+                            "^com\\.apple\\.Safari$"
+                        ]
+                    }
+                ],
+                "from": {
+                    "key_code": "b",
+                    "modifiers": {
+                        "mandatory": [
+                            "command"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "open_bracket",
+                        "modifiers": [
+                            "command"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "conditions": [
+                    {
+                        "type": "frontmost_application_if",
+                        "bundle_identifiers": [
+                            "^com\\.google\\.Chrome$",
+                            "^org\\.mozilla\\.firefox$",
+                            "^com\\.apple\\.Safari$"
+                        ]
+                    }
+                ],
+                "from": {
+                    "key_code": "s",
+                    "modifiers": {
+                        "mandatory": [
+                            "command"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "r",
+                        "modifiers": [
+                            "command"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "description": "jetbrains",
+        "manipulators": [
+            {
+                "type": "basic",
+                "conditions": [
+                    {
+                        "type": "frontmost_application_if",
+                        "bundle_identifiers": [
+                            "^com\\.jetbrains\\."
+                        ]
+                    }
+                ],
+                "from": {
+                    "key_code": "q",
+                    "modifiers": {
+                        "mandatory": [
+                            "command"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "open_bracket",
+                        "modifiers": [
+                            "shift",
+                            "command"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "conditions": [
+                    {
+                        "type": "frontmost_application_if",
+                        "bundle_identifiers": [
+                            "^com\\.jetbrains\\."
+                        ]
+                    }
+                ],
+                "from": {
+                    "key_code": "e",
+                    "modifiers": {
+                        "mandatory": [
+                            "command"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "close_bracket",
+                        "modifiers": [
+                            "shift",
+                            "command"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "description": "ctrl-D",
+        "manipulators": [
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "d",
+                    "modifiers": {
+                        "mandatory": [
+                            "command"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "delete_forward"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "description": "ctrl-2 (only for chrome devtools source panel)",
+        "manipulators": [
+            {
+                "type": "basic",
+                "conditions": [
+                    {
+                        "type": "frontmost_application_if",
+                        "bundle_identifiers": [
+                            "^com\\.google\\.Chrome$"
+                        ]
+                    }
+                ],
+                "from": {
+                    "key_code": "2",
+                    "modifiers": {
+                        "mandatory": [
+                            "command"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "s",
+                        "modifiers": [
+                            "command"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "description": "ctrl-arrow",
+        "manipulators": [
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "left_arrow",
+                    "modifiers": {
+                        "mandatory": [
+                            "command"
+                        ],
+                        "optional": [
+                            "any"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "left_arrow",
+                        "modifiers": [
+                            "option"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "right_arrow",
+                    "modifiers": {
+                        "mandatory": [
+                            "command"
+                        ],
+                        "optional": [
+                            "any"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "right_arrow",
+                        "modifiers": [
+                            "option"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "up_arrow",
+                    "modifiers": {
+                        "mandatory": [
+                            "command"
+                        ],
+                        "optional": [
+                            "any"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "page_up"
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "down_arrow",
+                    "modifiers": {
+                        "mandatory": [
+                            "command"
+                        ],
+                        "optional": [
+                            "any"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "page_down"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "description": "arrow-key",
+        "manipulators": [
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "j",
+                    "modifiers": {
+                        "mandatory": [
+                            "command"
+                        ],
+                        "optional": [
+                            "any"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "left_arrow"
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "k",
+                    "modifiers": {
+                        "mandatory": [
+                            "command"
+                        ],
+                        "optional": [
+                            "any"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "up_arrow"
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "l",
+                    "modifiers": {
+                        "mandatory": [
+                            "command"
+                        ],
+                        "optional": [
+                            "any"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "down_arrow"
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "semicolon",
+                    "modifiers": {
+                        "mandatory": [
+                            "command"
+                        ],
+                        "optional": [
+                            "any"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "right_arrow"
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "from": {
+                    "key_code": "quote",
+                    "modifiers": {
+                        "mandatory": [
+                            "command"
+                        ],
+                        "optional": [
+                            "any"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "return_or_enter"
+                    }
+                ]
+            }
+        ]
+    }
+]

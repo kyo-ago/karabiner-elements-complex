@@ -1,5 +1,4 @@
 {
-  "description": "角カッコとブレース",
   ":lang": "en",
   ":manipulators": [
     "open_bracket:shift-open_bracket",

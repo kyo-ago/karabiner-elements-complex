@@ -1,5 +1,4 @@
 {
-  "description": "カッコと山カッコ",
   ":manipulators": [
     "*-shift-comma:shift-9",
     "*-shift-period:shift-0",

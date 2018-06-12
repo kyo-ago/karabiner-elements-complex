@@ -28,6 +28,7 @@
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "prettier": "prettier --tab-width 4 --trailing-comma --write 'src/**/*.ts' 'tsconfig.json'",
-    "test": "mocha --require espower-typescript/guess 'src/**/*.spec.ts'"
+    "test": "mocha --require espower-typescript/guess 'src/**/*.spec.ts'",
+    "test-update": "UPDATE_SNAPSHOT=1 mocha --require espower-typescript/guess 'src/**/*.spec.ts'"
   }
 }

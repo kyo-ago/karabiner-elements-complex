@@ -195,7 +195,7 @@ $ head *.json
     "cmd-shift-f:japanese_eisuu,'() => {}',left_arrow,left_arrow,left_arrow,left_arrow,left_arrow,left_arrow,left_arrow",
     "cmd-shift-l:japanese_eisuu,'.length'",
 ...
-$ node --update index.js # update karabiner-elements setting
+$ node index.js --noUpdate # update karabiner-elements setting
 ```
 
 # Options

@@ -12,5 +12,13 @@ describe("app", () => {
             app({ ":app": "browsers", conditions: [{ type: "" }] }).conditions
                 .length === 2
         );
+        assert.deepStrictEqual(app({ ":app": "hoge" }), {
+            conditions: [
+                {
+                    bundle_identifiers: ["hoge"],
+                    type: "frontmost_application_if",
+                },
+            ],
+        });
     });
 });

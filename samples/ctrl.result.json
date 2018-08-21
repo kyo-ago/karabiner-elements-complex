@@ -184,6 +184,33 @@
         ]
     },
     {
+        "description": "finder",
+        "manipulators": [
+            {
+                "type": "basic",
+                "conditions": [
+                    {
+                        "type": "frontmost_application_if",
+                        "bundle_identifiers": [
+                            "^com\\.apple\\.finder"
+                        ]
+                    }
+                ],
+                "from": {
+                    "key_code": "return_or_enter"
+                },
+                "to": [
+                    {
+                        "key_code": "o",
+                        "modifiers": [
+                            "command"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "description": "ctrl-D",
         "manipulators": [
             {

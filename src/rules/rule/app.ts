@@ -9,6 +9,7 @@ let conditionAppMap = {
     ],
     chrome: ["^com\\.google\\.Chrome$"],
     jetbrains: ["^com\\.jetbrains\\."],
+    finder: ["^com\\.apple\\.finder"],
 };
 
 export const app = condition_map(
@@ -31,6 +32,11 @@ export const app = condition_map(
                 ],
             };
         }
-        throw new Error(`Unknown ConditionAppMap "${condition}"`);
+        return {
+            type: "frontmost_application_if",
+            bundle_identifiers: Array.isArray(condition)
+                ? condition
+                : [condition],
+        };
     }
 );

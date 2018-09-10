@@ -1,0 +1,94 @@
+[
+    {
+        "description": "shift*2 to cmd-p(only for chrome devtools source panel)",
+        "manipulators": [
+            {
+                "conditions": [
+                    {
+                        "type": "variable_if",
+                        "name": "right_shift pressed",
+                        "value": 1
+                    },
+                    {
+                        "type": "frontmost_application_if",
+                        "bundle_identifiers": [
+                            "^com\\.google\\.Chrome$"
+                        ]
+                    }
+                ],
+                "type": "basic",
+                "from": {
+                    "key_code": "right_shift",
+                    "modifiers": {
+                        "mandatory": [],
+                        "optional": [
+                            "any"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "p",
+                        "modifiers": [
+                            "command"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "description": "shift*2 to set_variable(only for chrome devtools source panel)",
+        "manipulators": [
+            {
+                "to": [
+                    {
+                        "set_variable": {
+                            "name": "right_shift pressed",
+                            "value": 1
+                        }
+                    },
+                    {
+                        "key_code": "right_shift"
+                    }
+                ],
+                "to_delayed_action": {
+                    "to_if_invoked": [
+                        {
+                            "set_variable": {
+                                "name": "right_shift pressed",
+                                "value": 0
+                            }
+                        }
+                    ],
+                    "to_if_canceled": [
+                        {
+                            "set_variable": {
+                                "name": "right_shift pressed",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
+                "type": "basic",
+                "conditions": [
+                    {
+                        "type": "frontmost_application_if",
+                        "bundle_identifiers": [
+                            "^com\\.google\\.Chrome$"
+                        ]
+                    }
+                ],
+                "from": {
+                    "key_code": "right_shift",
+                    "modifiers": {
+                        "mandatory": [],
+                        "optional": [
+                            "any"
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+]

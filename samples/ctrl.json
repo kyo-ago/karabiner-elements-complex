@@ -13,6 +13,7 @@
     "description": "jetbrains",
     ":app": "jetbrains",
     ":manipulators": [
+      "com-b:com-open_bracket",
       "com-q:shift-com-open_bracket",
       "com-e:shift-com-close_bracket"
     ]

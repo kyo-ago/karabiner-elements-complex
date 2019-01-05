@@ -202,7 +202,7 @@ $ node index.js --noUpdate # update karabiner-elements setting
 
 ## --json
 
-Target json dexirekutori path. (default `__dirname`)
+Target json directory path. (default `__dirname`)
 
 ## --noUpdate
 

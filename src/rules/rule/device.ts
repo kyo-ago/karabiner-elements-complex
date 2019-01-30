@@ -15,6 +15,10 @@ let conditionDeviceMap = {
         vendor_id: 1452,
         product_id: 629,
     },
+    appleTouchbar: {
+        vendor_id: 1452,
+        product_id: 635,
+    },
 };
 
 export const device = condition_map(

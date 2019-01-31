@@ -1,0 +1,34 @@
+[
+    {
+        "manipulators": [
+            {
+                "type": "basic",
+                "conditions": [
+                    {
+                        "type": "frontmost_application_if",
+                        "bundle_identifiers": [
+                            "^com\\.microsoft\\.VSCode$"
+                        ]
+                    }
+                ],
+                "from": {
+                    "key_code": "t",
+                    "modifiers": {
+                        "mandatory": [
+                            "command"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "n",
+                        "modifiers": [
+                            "command"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "description": "vscode"
+    }
+]

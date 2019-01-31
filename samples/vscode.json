@@ -1,0 +1,6 @@
+{
+  ":app": "vscode",
+  ":manipulators": [
+    "com-t:com-n"
+  ]
+}

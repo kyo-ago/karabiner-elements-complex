@@ -10,6 +10,7 @@ let conditionAppMap = {
     chrome: ["^com\\.google\\.Chrome$"],
     jetbrains: ["^com\\.jetbrains\\."],
     vscode: ["^com\\.microsoft\\.VSCode$"],
+    slack: ["^com\\.tinyspeck\\.slackmacgap$"],
     finder: ["^com\\.apple\\.finder"],
 };
 

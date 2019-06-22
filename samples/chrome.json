@@ -49,4 +49,10 @@
       },
     },
   },
+  {
+    ":app": "chrome",
+    ":manipulators": [
+      "com-r:com-shift-t",
+    ],
+  },
 ]

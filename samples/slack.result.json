@@ -1,6 +1,6 @@
 [
     {
-        "description": "shift*2 to cmd-p(only for chrome devtools source panel)",
+        "description": "shift*2 to cmd-k",
         "manipulators": [
             {
                 "conditions": [
@@ -12,7 +12,7 @@
                     {
                         "type": "frontmost_application_if",
                         "bundle_identifiers": [
-                            "^com\\.google\\.Chrome$"
+                            "^com\\.tinyspeck\\.slackmacgap$"
                         ]
                     }
                 ],
@@ -28,7 +28,7 @@
                 },
                 "to": [
                     {
-                        "key_code": "p",
+                        "key_code": "k",
                         "modifiers": [
                             "command"
                         ]
@@ -38,7 +38,7 @@
         ]
     },
     {
-        "description": "shift*2 to set_variable(only for chrome devtools source panel)",
+        "description": "shift*2 to set_variable",
         "manipulators": [
             {
                 "to": [
@@ -75,7 +75,7 @@
                     {
                         "type": "frontmost_application_if",
                         "bundle_identifiers": [
-                            "^com\\.google\\.Chrome$"
+                            "^com\\.tinyspeck\\.slackmacgap$"
                         ]
                     }
                 ],
@@ -90,38 +90,5 @@
                 }
             }
         ]
-    },
-    {
-        "manipulators": [
-            {
-                "type": "basic",
-                "conditions": [
-                    {
-                        "type": "frontmost_application_if",
-                        "bundle_identifiers": [
-                            "^com\\.google\\.Chrome$"
-                        ]
-                    }
-                ],
-                "from": {
-                    "key_code": "r",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ]
-                    }
-                },
-                "to": [
-                    {
-                        "key_code": "t",
-                        "modifiers": [
-                            "command",
-                            "shift"
-                        ]
-                    }
-                ]
-            }
-        ],
-        "description": "chrome"
     }
 ]

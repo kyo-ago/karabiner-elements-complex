@@ -1,6 +1,9 @@
 {
   ":app": "vscode",
   ":manipulators": [
-    "com-t:com-n"
+    "com-t:com-n",
+    "com-r:com-opt-f",
+    "com-q:com-opt-left_arrow",
+    "com-e:com-opt-right_arrow",
   ]
 }

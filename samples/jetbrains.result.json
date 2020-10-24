@@ -56,6 +56,34 @@
                         ]
                     }
                 ]
+            },
+            {
+                "type": "basic",
+                "conditions": [
+                    {
+                        "type": "frontmost_application_if",
+                        "bundle_identifiers": [
+                            "^com\\.jetbrains\\."
+                        ]
+                    }
+                ],
+                "from": {
+                    "key_code": "q",
+                    "modifiers": {
+                        "mandatory": [
+                            "command",
+                            "shift"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "f12",
+                        "modifiers": [
+                            "option"
+                        ]
+                    }
+                ]
             }
         ],
         "description": "jetbrains"

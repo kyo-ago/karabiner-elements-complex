@@ -8,7 +8,7 @@ karabiner-elements is very awesome. but complex_modifications setting json is ve
 
 karabiner-elements-complex makes it easy to write complex_modifications setting json.
 
-Of course you can also use [pqrs\-org/KE\-complex\_modifications](https://github.com/pqrs-org/KE-complex_modifications). But "aaa" is written in Ruby.
+Of course you can also use [pqrs\-org/KE\-complex\_modifications](https://github.com/pqrs-org/KE-complex_modifications). But "KE-complex_modifications" is written in Ruby.
 
 <table>
 <thead><tr><th>karabiner-elements</th><th>karabiner-elements-complex</th></tr></thead>

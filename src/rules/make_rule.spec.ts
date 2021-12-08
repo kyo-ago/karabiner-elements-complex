@@ -1,4 +1,4 @@
-import assert = require("assert");
+import * as assert from "assert";
 import { make_rule } from "./make_rule";
 
 describe("make_rule", () => {

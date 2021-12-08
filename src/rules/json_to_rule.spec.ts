@@ -1,4 +1,4 @@
-import assert = require("assert");
+import * as assert from "assert";
 import { json_to_rule } from "./json_to_rule";
 
 describe("json_to_rule", () => {

@@ -1,4 +1,4 @@
-import assert = require("assert");
+import * as assert from "assert";
 import { string_shortcut } from "./string_shortcut";
 
 describe("string_shortcut", () => {

@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import * as path from "path";
 import { read_rules } from "./read_rules";
-import assert = require("assert");
+import * as assert from "assert";
 
 describe("Snapshot testing", () => {
     let targetDir = `./samples/`;

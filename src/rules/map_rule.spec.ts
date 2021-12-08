@@ -1,4 +1,4 @@
-import assert = require("assert");
+import * as assert from "assert";
 import { map_rule } from "./map_rule";
 
 describe("map_rule", () => {

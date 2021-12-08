@@ -1,4 +1,4 @@
-import assert = require("assert");
+import * as assert from "assert";
 import { only_filter } from "./only_filter";
 
 describe("only_filter", () => {

@@ -19,6 +19,10 @@ let conditionDeviceMap = {
         vendor_id: 1452,
         product_id: 635,
     },
+    appleTouchId: {
+        vendor_id: 1452,
+        product_id: 834,
+    },
 };
 
 export const device = condition_map(

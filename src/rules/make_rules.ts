@@ -7,38 +7,38 @@ import { LangInputSources } from "./rule/lang";
 import { ToModifier } from "./rule/to";
 
 export interface ManipulatorConditions {
-    type: string;
-    bundle_identifiers?: string[];
-    identifiers?: DeviceIdentifiers[];
-    input_sources?: LangInputSources[];
+  type: string;
+  bundle_identifiers?: string[];
+  identifiers?: DeviceIdentifiers[];
+  input_sources?: LangInputSources[];
 }
 
 export interface Manipulator {
-    type?: string;
-    conditions?: ManipulatorConditions[];
-    from?: FromModifier;
-    to?: ToModifier[];
+  type?: string;
+  conditions?: ManipulatorConditions[];
+  from?: FromModifier;
+  to?: ToModifier[];
 
-    ":from"?: string;
-    ":to"?: string;
-    ":app"?: string;
-    ":device"?: string;
-    ":lang"?: string;
+  ":from"?: string;
+  ":to"?: string;
+  ":app"?: string;
+  ":device"?: string;
+  ":lang"?: string;
 }
 
 export interface ComplexModificationRule {
-    description?: string;
-    manipulators?: Manipulator[];
-    ":manipulators"?: Manipulator | Manipulator[];
-    ":only"?: boolean;
+  description?: string;
+  manipulators?: Manipulator[];
+  ":manipulators"?: Manipulator | Manipulator[];
+  ":only"?: boolean;
 }
 
 export interface ComplexModificationRuleSet {
-    only: boolean;
-    rules: ComplexModificationRule[];
+  only: boolean;
+  rules: ComplexModificationRule[];
 }
 
 export function make_rules(json: any): ComplexModificationRuleSet {
-    let rules = json_to_rule(json).map(rule => make_rule(rule));
-    return make_rule_set(rules);
+  let rules = json_to_rule(json).map(rule => make_rule(rule));
+  return make_rule_set(rules);
 }

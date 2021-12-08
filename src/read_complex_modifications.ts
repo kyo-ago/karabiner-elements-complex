@@ -1,22 +1,22 @@
 import * as fs from "fs";
 
 export interface ComplexModificationFile {
-    fileName: string;
-    textContent: string;
+  fileName: string;
+  textContent: string;
 }
 
 export function read_complex_modifications(
-    dirname: string
+  dirname: string
 ): ComplexModificationFile[] {
-    return fs
-        .readdirSync(dirname)
-        .filter(file => file.match(/\.json$/))
-        .filter(file => !file.match(/\.result\.json$/))
-        .map(file => {
-            let path = `${dirname}/${file}`;
-            return {
-                fileName: file,
-                textContent: fs.readFileSync(path, "utf-8"),
-            };
-        });
+  return fs
+    .readdirSync(dirname)
+    .filter(file => file.match(/\.json$/))
+    .filter(file => !file.match(/\.result\.json$/))
+    .map(file => {
+      let path = `${dirname}/${file}`;
+      return {
+        fileName: file,
+        textContent: fs.readFileSync(path, "utf-8")
+      };
+    });
 }

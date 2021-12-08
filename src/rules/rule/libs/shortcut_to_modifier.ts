@@ -8,79 +8,77 @@ let toModifierMap: {
 } = {
   "(": {
     key: "9",
-    mod: "shift"
+    mod: "shift",
   },
   ")": {
     key: "0",
-    mod: "shift"
+    mod: "shift",
   },
   "{": {
     key: "open_bracket",
-    mod: "shift"
+    mod: "shift",
   },
   "}": {
     key: "close_bracket",
-    mod: "shift"
+    mod: "shift",
   },
   "<": {
     key: "comma",
-    mod: "shift"
+    mod: "shift",
   },
   ">": {
     key: "period",
-    mod: "shift"
+    mod: "shift",
   },
   '"': {
     key: "quote",
-    mod: "shift"
+    mod: "shift",
   },
   "'": {
-    key: "quote"
+    key: "quote",
   },
   ",": {
-    key: "comma"
+    key: "comma",
   },
   ".": {
-    key: "period"
+    key: "period",
   },
   " ": {
-    key: "spacebar"
+    key: "spacebar",
   },
   "=": {
-    key: "equal_sign"
+    key: "equal_sign",
   },
   ";": {
-    key: "semicolon"
+    key: "semicolon",
   },
   ":": {
     key: "semicolon",
-    mod: "shift"
-  }
+    mod: "shift",
+  },
 };
 
 export function shortcut_to_modifier(short: string): ToModifier[] {
   return short
     .replace(/^'(.+?)'$/, "$1")
     .split(/(?:)/)
-    .map(
-      (key: string): ToModifier => {
-        if (!toModifierMap[key]) {
-          if (key.toLowerCase() === key) {
-            return { key_code: key };
-          }
-          return {
-            key_code: key.toLowerCase(),
-            modifiers: ["shift"]
-          };
-        }
-        let mod = toModifierMap[key]["mod"];
-        if (!mod) {
-          return { key_code: toModifierMap[key]["key"] };
+    .map((key: string): ToModifier => {
+      if (!toModifierMap[key]) {
+        if (key.toLowerCase() === key) {
+          return { key_code: key };
         }
         return {
-          key_code: toModifierMap[key]["key"],
-          modifiers: [mod]
+          key_code: key.toLowerCase(),
+          modifiers: ["shift"],
         };
       }
-    );
+      let mod = toModifierMap[key]["mod"];
+      if (!mod) {
+        return { key_code: toModifierMap[key]["key"] };
+      }
+      return {
+        key_code: toModifierMap[key]["key"],
+        modifiers: [mod],
+      };
+    });
 }

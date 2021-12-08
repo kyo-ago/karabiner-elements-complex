@@ -9,31 +9,31 @@ describe("only_filter", () => {
           only: false,
           rules: [
             {
-              description: "not only1"
-            }
-          ]
+              description: "not only1",
+            },
+          ],
         },
         {
           only: true,
           rules: [
             {
-              description: "only"
-            }
-          ]
+              description: "only",
+            },
+          ],
         },
         {
           only: false,
           rules: [
             {
-              description: "not only2"
-            }
-          ]
-        }
+              description: "not only2",
+            },
+          ],
+        },
       ]),
       [
         {
-          description: "only"
-        }
+          description: "only",
+        },
       ]
     );
 
@@ -43,26 +43,26 @@ describe("only_filter", () => {
           only: false,
           rules: [
             {
-              description: "not only1"
-            }
-          ]
+              description: "not only1",
+            },
+          ],
         },
         {
           only: false,
           rules: [
             {
-              description: "not only2"
-            }
-          ]
-        }
+              description: "not only2",
+            },
+          ],
+        },
       ]),
       [
         {
-          description: "not only1"
+          description: "not only1",
         },
         {
-          description: "not only2"
-        }
+          description: "not only2",
+        },
       ]
     );
   });

@@ -19,6 +19,6 @@ if (!~process.argv.indexOf("--noUpdate")) {
 } else {
   console.log({
     title: "private settings",
-    rules: rules
+    rules: rules,
   });
 }

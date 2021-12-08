@@ -16,26 +16,26 @@ export function fromModifier(
 ): FromModifier {
   let keys = parse_shortcut(short);
   let result: FromModifier = Object.assign(base || {}, {
-    key_code: keys.pop()
+    key_code: keys.pop(),
   });
   if (!keys.length) {
     return result;
   }
   result.modifiers = result.modifiers || {
-    mandatory: []
+    mandatory: [],
   };
   if (~keys.indexOf("any")) {
     result.modifiers.optional = ["any"];
-    keys = keys.filter(key => key !== "any");
+    keys = keys.filter((key) => key !== "any");
   }
-  if (keys.find(key => key.includes("?"))) {
+  if (keys.find((key) => key.includes("?"))) {
     let optional = keys
-      .filter(key => key.includes("?"))
-      .map(key => key.replace("?", ""));
+      .filter((key) => key.includes("?"))
+      .map((key) => key.replace("?", ""));
     result.modifiers.optional = (result.modifiers.optional || []).concat(
       optional
     );
-    keys = keys.filter(key => !key.includes("?"));
+    keys = keys.filter((key) => !key.includes("?"));
   }
   if (!keys.length) {
     return result;

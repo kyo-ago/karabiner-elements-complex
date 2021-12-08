@@ -5,13 +5,13 @@ let conditionAppMap = {
   browsers: [
     "^com\\.google\\.Chrome$",
     "^org\\.mozilla\\.firefox$",
-    "^com\\.apple\\.Safari$"
+    "^com\\.apple\\.Safari$",
   ],
   chrome: ["^com\\.google\\.Chrome$"],
   jetbrains: ["^com\\.jetbrains\\."],
   vscode: ["^com\\.microsoft\\.VSCode$"],
   slack: ["^com\\.tinyspeck\\.slackmacgap$"],
-  finder: ["^com\\.apple\\.finder"]
+  finder: ["^com\\.apple\\.finder"],
 };
 
 export const app = condition_map(
@@ -20,18 +20,18 @@ export const app = condition_map(
     if (conditionAppMap[condition]) {
       return {
         type: "frontmost_application_if",
-        bundle_identifiers: conditionAppMap[condition]
+        bundle_identifiers: conditionAppMap[condition],
       };
     }
     if (condition.match(/^!/) && conditionAppMap[condition.replace(/^!/, "")]) {
       return {
         type: "frontmost_application_unless",
-        bundle_identifiers: [conditionAppMap[condition.replace(/^!/, "")]]
+        bundle_identifiers: [conditionAppMap[condition.replace(/^!/, "")]],
       };
     }
     return {
       type: "frontmost_application_if",
-      bundle_identifiers: Array.isArray(condition) ? condition : [condition]
+      bundle_identifiers: Array.isArray(condition) ? condition : [condition],
     };
   }
 );

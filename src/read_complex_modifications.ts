@@ -10,13 +10,13 @@ export function read_complex_modifications(
 ): ComplexModificationFile[] {
   return fs
     .readdirSync(dirname)
-    .filter(file => file.match(/\.json$/))
-    .filter(file => !file.match(/\.result\.json$/))
-    .map(file => {
+    .filter((file) => file.match(/\.json$/))
+    .filter((file) => !file.match(/\.result\.json$/))
+    .map((file) => {
       let path = `${dirname}/${file}`;
       return {
         fileName: file,
-        textContent: fs.readFileSync(path, "utf-8")
+        textContent: fs.readFileSync(path, "utf-8"),
       };
     });
 }

@@ -9,20 +9,20 @@ export interface DeviceIdentifiers {
 let conditionDeviceMap = {
   barocco: {
     vendor_id: 1241,
-    product_id: 323
+    product_id: 323,
   },
   apple: {
     vendor_id: 1452,
-    product_id: 629
+    product_id: 629,
   },
   appleTouchbar: {
     vendor_id: 1452,
-    product_id: 635
+    product_id: 635,
   },
   appleTouchId: {
     vendor_id: 1452,
-    product_id: 834
-  }
+    product_id: 834,
+  },
 };
 
 export const device = condition_map(
@@ -31,7 +31,7 @@ export const device = condition_map(
     if (conditionDeviceMap[condition]) {
       return {
         type: "device_if",
-        identifiers: [conditionDeviceMap[condition]]
+        identifiers: [conditionDeviceMap[condition]],
       };
     }
     if (
@@ -40,7 +40,7 @@ export const device = condition_map(
     ) {
       return {
         type: "device_unless",
-        identifiers: [conditionDeviceMap[condition.replace(/^!/, "")]]
+        identifiers: [conditionDeviceMap[condition.replace(/^!/, "")]],
       };
     }
     throw new Error(`Unknown ConditionDevice "${condition}"`);

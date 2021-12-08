@@ -6,30 +6,30 @@ describe("json_to_rule", () => {
     assert.deepStrictEqual(
       json_to_rule([
         {
-          description: "hoge"
-        }
+          description: "hoge",
+        },
       ]),
       [
         {
-          description: "hoge"
-        }
+          description: "hoge",
+        },
       ]
     );
 
     assert.deepStrictEqual(
       json_to_rule([
         {
-          hoge: "huga"
-        }
+          hoge: "huga",
+        },
       ]),
       [
         {
           manipulators: [
             {
-              hoge: "huga"
-            }
-          ]
-        }
+              hoge: "huga",
+            },
+          ],
+        },
       ]
     );
   });
@@ -38,25 +38,25 @@ describe("json_to_rule", () => {
       json_to_rule({
         rules: [
           {
-            description: "hoge"
-          }
-        ]
+            description: "hoge",
+          },
+        ],
       }),
       [
         {
-          description: "hoge"
-        }
+          description: "hoge",
+        },
       ]
     );
 
     assert.deepStrictEqual(
       json_to_rule({
-        description: "hoge"
+        description: "hoge",
       }),
       [
         {
-          description: "hoge"
-        }
+          description: "hoge",
+        },
       ]
     );
   });

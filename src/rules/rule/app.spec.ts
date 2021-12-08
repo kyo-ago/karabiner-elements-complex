@@ -14,9 +14,9 @@ describe("app", () => {
       conditions: [
         {
           bundle_identifiers: ["hoge"],
-          type: "frontmost_application_if"
-        }
-      ]
+          type: "frontmost_application_if",
+        },
+      ],
     });
   });
 });

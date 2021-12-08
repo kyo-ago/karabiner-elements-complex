@@ -3,7 +3,7 @@ import { ComplexModificationRule } from "./make_rules";
 export function make_rule(rule: any): ComplexModificationRule {
   if (rule.length) {
     return {
-      manipulators: rule
+      manipulators: rule,
     };
   }
   if (rule[":manipulators"]) {

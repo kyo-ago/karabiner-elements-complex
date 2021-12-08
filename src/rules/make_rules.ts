@@ -39,6 +39,6 @@ export interface ComplexModificationRuleSet {
 }
 
 export function make_rules(json: any): ComplexModificationRuleSet {
-  let rules = json_to_rule(json).map(rule => make_rule(rule));
+  let rules = json_to_rule(json).map((rule) => make_rule(rule));
   return make_rule_set(rules);
 }

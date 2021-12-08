@@ -5,9 +5,9 @@ let modifierMap: { [key: string]: string } = {
   opt: "option",
   alt: "alt",
   ctrl: "control",
-  "*": "any"
+  "*": "any",
 };
 
 export function parse_shortcut(shortcut: string): string[] {
-  return shortcut.split("-").map(key => modifierMap[key] || key);
+  return shortcut.split("-").map((key) => modifierMap[key] || key);
 }

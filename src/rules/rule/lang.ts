@@ -9,6 +9,6 @@ export const lang = condition_map(
   ":lang",
   (lang: string): ManipulatorConditions => ({
     type: "input_source_if",
-    input_sources: [{ language: lang }]
+    input_sources: [{ language: lang }],
   })
 );

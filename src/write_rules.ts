@@ -13,15 +13,13 @@ interface KarabinerJson {
 }
 
 export function write_rules(rules: ComplexModificationRule[]) {
-  let karabinerJsonPath = `${
-    process.env.HOME
-  }/.config/karabiner/karabiner.json`;
+  let karabinerJsonPath = `${process.env.HOME}/.config/karabiner/karabiner.json`;
   let karabinerJson: KarabinerJson = eval(
     `(${fs.readFileSync(karabinerJsonPath, "utf-8")})`
   );
   karabinerJson.profiles
-    .filter(profile => profile.selected)
-    .forEach(profile => (profile.complex_modifications.rules = rules));
+    .filter((profile) => profile.selected)
+    .forEach((profile) => (profile.complex_modifications.rules = rules));
   fs.writeFileSync(
     karabinerJsonPath,
     JSON.stringify(karabinerJson, null, "  ")

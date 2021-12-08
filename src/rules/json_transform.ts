@@ -6,6 +6,6 @@ export function json_transform(
   fileName: string
 ): ComplexModificationRuleSet {
   let ruleSet = make_rules(json);
-  ruleSet.rules = ruleSet.rules.map(rule => map_rule(rule, fileName));
+  ruleSet.rules = ruleSet.rules.map((rule) => map_rule(rule, fileName));
   return ruleSet;
 }

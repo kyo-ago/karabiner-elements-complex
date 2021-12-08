@@ -14,12 +14,12 @@ export function toModifier(
 ): ToModifier[] {
   let results = short
     .split(/,/)
-    .filter(short => short)
+    .filter((short) => short)
     .reduce((base: ToModifier[], short: string) => {
       if (!short.match(/^'.+?'$/)) {
         let keys = parse_shortcut(short);
         let result: ToModifier = {
-          key_code: keys.pop() || ""
+          key_code: keys.pop() || "",
         };
         if (keys.length) {
           result.modifiers = keys;

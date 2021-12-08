@@ -6,13 +6,13 @@ describe("map_rule", () => {
     assert.deepStrictEqual(
       map_rule(
         {
-          manipulators: []
+          manipulators: [],
         },
         "file name"
       ),
       {
         description: "file name",
-        manipulators: []
+        manipulators: [],
       }
     );
 
@@ -20,13 +20,13 @@ describe("map_rule", () => {
       map_rule(
         {
           description: "hoge",
-          manipulators: []
+          manipulators: [],
         },
         "file name"
       ),
       {
         description: "hoge",
-        manipulators: []
+        manipulators: [],
       }
     );
 
@@ -38,9 +38,9 @@ describe("map_rule", () => {
             "*-shift-a:'a','b',shift",
             {
               ":from": "a",
-              ":to": "b"
-            }
-          ]
+              ":to": "b",
+            },
+          ],
         },
         "file name"
       ),
@@ -51,47 +51,47 @@ describe("map_rule", () => {
             conditions: [
               {
                 bundle_identifiers: ["^com\\.google\\.Chrome$"],
-                type: "frontmost_application_if"
-              }
+                type: "frontmost_application_if",
+              },
             ],
             from: {
               key_code: "a",
               modifiers: {
                 mandatory: ["shift"],
-                optional: ["any"]
-              }
+                optional: ["any"],
+              },
             },
             to: [
               {
-                key_code: "a"
+                key_code: "a",
               },
               {
-                key_code: "b"
+                key_code: "b",
               },
               {
-                key_code: "shift"
-              }
+                key_code: "shift",
+              },
             ],
-            type: "basic"
+            type: "basic",
           },
           {
             conditions: [
               {
                 bundle_identifiers: ["^com\\.google\\.Chrome$"],
-                type: "frontmost_application_if"
-              }
+                type: "frontmost_application_if",
+              },
             ],
             from: {
-              key_code: "a"
+              key_code: "a",
             },
             to: [
               {
-                key_code: "b"
-              }
+                key_code: "b",
+              },
             ],
-            type: "basic"
-          }
-        ]
+            type: "basic",
+          },
+        ],
       }
     );
   });

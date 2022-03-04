@@ -515,44 +515,6 @@
                         "key_code": "s"
                     }
                 ]
-            },
-            {
-                "type": "basic",
-                "from": {
-                    "key_code": "v",
-                    "modifiers": {
-                        "mandatory": [
-                            "command",
-                            "shift"
-                        ]
-                    }
-                },
-                "to": [
-                    {
-                        "key_code": "japanese_eisuu"
-                    },
-                    {
-                        "key_code": "semicolon",
-                        "modifiers": [
-                            "shift"
-                        ]
-                    },
-                    {
-                        "key_code": "spacebar"
-                    },
-                    {
-                        "key_code": "v"
-                    },
-                    {
-                        "key_code": "o"
-                    },
-                    {
-                        "key_code": "i"
-                    },
-                    {
-                        "key_code": "d"
-                    }
-                ]
             }
         ],
         "description": "macro"

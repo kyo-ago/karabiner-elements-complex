@@ -44,5 +44,5 @@ export const device = condition_map(
       };
     }
     throw new Error(`Unknown ConditionDevice "${condition}"`);
-  }
+  },
 );

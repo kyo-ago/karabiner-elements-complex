@@ -8,7 +8,7 @@ describe("device", () => {
     assert(!(":device" in device({ ":device": "barocco" })));
     assert(
       device({ ":device": "barocco", conditions: [{ type: "" }] }).conditions
-        .length === 2
+        .length === 2,
     );
   });
 });

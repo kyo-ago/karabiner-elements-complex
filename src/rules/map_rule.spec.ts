@@ -8,12 +8,12 @@ describe("map_rule", () => {
         {
           manipulators: [],
         },
-        "file name"
+        "file name",
       ),
       {
         description: "file name",
         manipulators: [],
-      }
+      },
     );
 
     assert.deepStrictEqual(
@@ -22,12 +22,12 @@ describe("map_rule", () => {
           description: "hoge",
           manipulators: [],
         },
-        "file name"
+        "file name",
       ),
       {
         description: "hoge",
         manipulators: [],
-      }
+      },
     );
 
     assert.deepStrictEqual(
@@ -42,7 +42,7 @@ describe("map_rule", () => {
             },
           ],
         },
-        "file name"
+        "file name",
       ),
       {
         description: "file name",
@@ -92,7 +92,7 @@ describe("map_rule", () => {
             type: "basic",
           },
         ],
-      }
+      },
     );
   });
 });

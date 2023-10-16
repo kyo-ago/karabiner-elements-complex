@@ -12,7 +12,7 @@ export interface FromModifier {
 
 export function fromModifier(
   base: FromModifier | void,
-  short: string
+  short: string,
 ): FromModifier {
   let keys = parse_shortcut(short);
   let result: FromModifier = Object.assign(base || {}, {
@@ -33,7 +33,7 @@ export function fromModifier(
       .filter((key) => key.includes("?"))
       .map((key) => key.replace("?", ""));
     result.modifiers.optional = (result.modifiers.optional || []).concat(
-      optional
+      optional,
     );
     keys = keys.filter((key) => !key.includes("?"));
   }
@@ -49,5 +49,5 @@ export const from = remove_property(
   (manip: Manipulator, prop: string): Manipulator => {
     manip.from = fromModifier(manip.from, prop);
     return manip;
-  }
+  },
 );

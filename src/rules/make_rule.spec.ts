@@ -13,7 +13,7 @@ describe("make_rule", () => {
       }),
       {
         manipulators: [1, 2, 3],
-      }
+      },
     );
 
     assert.deepStrictEqual(
@@ -22,7 +22,7 @@ describe("make_rule", () => {
       }),
       {
         manipulators: [{ key: "val" }],
-      }
+      },
     );
   });
 });

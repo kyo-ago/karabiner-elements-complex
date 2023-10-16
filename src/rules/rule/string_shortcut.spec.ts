@@ -9,7 +9,7 @@ describe("string_shortcut", () => {
       }),
       {
         ":from": "hoge",
-      }
+      },
     );
 
     assert.deepStrictEqual(string_shortcut("hoge:huga"), {

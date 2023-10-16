@@ -10,7 +10,7 @@ export interface ToModifier {
 
 export function toModifier(
   base: ToModifier[] | void,
-  short: string
+  short: string,
 ): ToModifier[] {
   let results = short
     .split(/,/)
@@ -36,5 +36,5 @@ export const to = remove_property(
   (manip: Manipulator, prop: string): Manipulator => {
     manip.to = toModifier(manip.to, prop);
     return manip;
-  }
+  },
 );

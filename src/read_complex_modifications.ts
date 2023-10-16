@@ -6,7 +6,7 @@ export interface ComplexModificationFile {
 }
 
 export function read_complex_modifications(
-  dirname: string
+  dirname: string,
 ): ComplexModificationFile[] {
   return fs
     .readdirSync(dirname)

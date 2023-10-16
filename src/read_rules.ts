@@ -7,7 +7,7 @@ import {
 import { only_filter } from "./rules/only_filter";
 
 export function read_rules(
-  files: ComplexModificationFile[]
+  files: ComplexModificationFile[],
 ): ComplexModificationRule[] {
   let results = files.map((file): ComplexModificationRuleSet => {
     try {

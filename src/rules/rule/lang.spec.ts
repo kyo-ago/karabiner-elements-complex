@@ -8,7 +8,7 @@ describe("lang", () => {
     assert(!(":lang" in lang({ ":lang": "en" })));
     assert(
       lang({ ":lang": "en", conditions: [{ type: "" }] }).conditions.length ===
-        2
+        2,
     );
   });
 });

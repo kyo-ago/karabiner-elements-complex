@@ -14,7 +14,7 @@ describe("Snapshot testing", () => {
           {
             textContent: fs.readFileSync(
               path.join(targetDir, fileName),
-              "utf-8"
+              "utf-8",
             ),
             fileName: fileName,
           },
@@ -22,7 +22,7 @@ describe("Snapshot testing", () => {
         // Update snapshot with UPDATE_SNAPSHOT=1 npm test
         let expectedFilePath = path.join(
           targetDir,
-          fileName.replace(/.json$/, ".result.json")
+          fileName.replace(/.json$/, ".result.json"),
         );
         if (process.env.UPDATE_SNAPSHOT) {
           fs.writeFileSync(expectedFilePath, JSON.stringify(actual, null, 4));

@@ -13,7 +13,7 @@ describe("json_to_rule", () => {
         {
           description: "hoge",
         },
-      ]
+      ],
     );
 
     assert.deepStrictEqual(
@@ -30,7 +30,7 @@ describe("json_to_rule", () => {
             },
           ],
         },
-      ]
+      ],
     );
   });
   it("object", () => {
@@ -46,7 +46,7 @@ describe("json_to_rule", () => {
         {
           description: "hoge",
         },
-      ]
+      ],
     );
 
     assert.deepStrictEqual(
@@ -57,7 +57,7 @@ describe("json_to_rule", () => {
         {
           description: "hoge",
         },
-      ]
+      ],
     );
   });
 });

@@ -10,5 +10,5 @@ export const lang = condition_map(
   (lang: string): ManipulatorConditions => ({
     type: "input_source_if",
     input_sources: [{ language: lang }],
-  })
+  }),
 );

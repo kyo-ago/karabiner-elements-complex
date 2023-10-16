@@ -16,7 +16,7 @@ describe("pear", () => {
             key_code: "huga",
           },
         ],
-      }
+      },
     );
 
     assert.deepStrictEqual(
@@ -25,7 +25,7 @@ describe("pear", () => {
       }),
       {
         ":hoge": true,
-      }
+      },
     );
 
     assert.deepStrictEqual(
@@ -34,7 +34,7 @@ describe("pear", () => {
       }),
       {
         hoge: "huga",
-      }
+      },
     );
   });
 });

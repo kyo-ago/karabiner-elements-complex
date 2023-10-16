@@ -34,7 +34,7 @@ describe("only_filter", () => {
         {
           description: "only",
         },
-      ]
+      ],
     );
 
     assert.deepStrictEqual(
@@ -63,7 +63,7 @@ describe("only_filter", () => {
         {
           description: "not only2",
         },
-      ]
+      ],
     );
   });
 });

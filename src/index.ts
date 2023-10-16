@@ -5,7 +5,7 @@ import { write_rules } from "./write_rules";
 let files = read_complex_modifications(
   ~process.argv.indexOf("--json")
     ? process.argv[process.argv.indexOf("--json") + 1]
-    : __dirname
+    : __dirname,
 );
 if (!files.length) {
   console.error("missing setting json files");

@@ -4,7 +4,7 @@ import {
 } from "./make_rules";
 
 export function only_filter(
-  rules: ComplexModificationRuleSet[]
+  rules: ComplexModificationRuleSet[],
 ): ComplexModificationRule[] {
   let isOnly = rules.find((rule) => rule.only);
   let filteredRules = isOnly ? rules.filter((rule) => rule.only) : rules;

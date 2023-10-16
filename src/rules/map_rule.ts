@@ -11,7 +11,7 @@ import { type_basic } from "./type_basic";
 
 export function map_rule(
   json: ComplexModificationRule,
-  fileName: string
+  fileName: string,
 ): ComplexModificationRule {
   let { rule, attr } = set_attrs(json);
   rule.description = rule.description || fileName.replace(/\.\w+/, "");

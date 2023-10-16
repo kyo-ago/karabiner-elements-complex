@@ -1,7 +1,7 @@
 import { Manipulator } from "../make_rules";
 
 export function string_shortcut(
-  manip: Manipulator | string
+  manip: Manipulator | string,
 ): Manipulator | string {
   if ("string" !== typeof manip) {
     return manip;

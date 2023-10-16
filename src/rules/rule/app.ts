@@ -33,5 +33,5 @@ export const app = condition_map(
       type: "frontmost_application_if",
       bundle_identifiers: Array.isArray(condition) ? condition : [condition],
     };
-  }
+  },
 );

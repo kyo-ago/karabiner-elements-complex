@@ -4,7 +4,7 @@ import {
 } from "./make_rules";
 
 export function make_rule_set(
-  rules: ComplexModificationRule[]
+  rules: ComplexModificationRule[],
 ): ComplexModificationRuleSet {
   if (!rules.find((rule) => rule[":only"])) {
     return {

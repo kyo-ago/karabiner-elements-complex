@@ -13,7 +13,7 @@ describe("to", () => {
             key_code: "a",
           },
         ],
-      }
+      },
     );
 
     assert.deepStrictEqual(
@@ -27,7 +27,7 @@ describe("to", () => {
             modifiers: ["command"],
           },
         ],
-      }
+      },
     );
   });
 });

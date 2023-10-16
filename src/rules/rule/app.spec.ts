@@ -8,7 +8,7 @@ describe("app", () => {
     assert(!(":app" in app({ ":app": "browsers" })));
     assert(
       app({ ":app": "browsers", conditions: [{ type: "" }] }).conditions
-        .length === 2
+        .length === 2,
     );
     assert.deepStrictEqual(app({ ":app": "hoge" }), {
       conditions: [

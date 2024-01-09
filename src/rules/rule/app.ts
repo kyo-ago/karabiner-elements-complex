@@ -9,6 +9,7 @@ let conditionAppMap = {
   ],
   chrome: ["^com\\.google\\.Chrome$"],
   jetbrains: ["^com\\.jetbrains\\."],
+  cursor: ["^com\\.todesktop\\.230313mzl4w4u92"],
   vscode: ["^com\\.microsoft\\.VSCode$"],
   slack: ["^com\\.tinyspeck\\.slackmacgap$"],
   finder: ["^com\\.apple\\.finder"],

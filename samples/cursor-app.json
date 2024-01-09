@@ -1,0 +1,8 @@
+{
+  ":app": "cursor",
+  ":manipulators": [
+    "com-t:com-n",
+    "com-q:com-shift-open_bracket",
+    "com-e:com-shift-close_bracket",
+  ]
+}

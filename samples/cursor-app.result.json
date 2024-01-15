@@ -39,6 +39,89 @@
                     }
                 ],
                 "from": {
+                    "key_code": "r",
+                    "modifiers": {
+                        "mandatory": [
+                            "command"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "f",
+                        "modifiers": [
+                            "command",
+                            "option"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "conditions": [
+                    {
+                        "type": "frontmost_application_if",
+                        "bundle_identifiers": [
+                            "^com\\.todesktop\\.230313mzl4w4u92"
+                        ]
+                    }
+                ],
+                "from": {
+                    "key_code": "b",
+                    "modifiers": {
+                        "mandatory": [
+                            "command"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "hyphen",
+                        "modifiers": [
+                            "control"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "conditions": [
+                    {
+                        "type": "frontmost_application_if",
+                        "bundle_identifiers": [
+                            "^com\\.todesktop\\.230313mzl4w4u92"
+                        ]
+                    }
+                ],
+                "from": {
+                    "key_code": "1",
+                    "modifiers": {
+                        "mandatory": [
+                            "command"
+                        ]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "f",
+                        "modifiers": [
+                            "shift",
+                            "option"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "basic",
+                "conditions": [
+                    {
+                        "type": "frontmost_application_if",
+                        "bundle_identifiers": [
+                            "^com\\.todesktop\\.230313mzl4w4u92"
+                        ]
+                    }
+                ],
+                "from": {
                     "key_code": "q",
                     "modifiers": {
                         "mandatory": [
@@ -48,10 +131,10 @@
                 },
                 "to": [
                     {
-                        "key_code": "open_bracket",
+                        "key_code": "left_arrow",
                         "modifiers": [
                             "command",
-                            "shift"
+                            "option"
                         ]
                     }
                 ]
@@ -76,10 +159,10 @@
                 },
                 "to": [
                     {
-                        "key_code": "close_bracket",
+                        "key_code": "right_arrow",
                         "modifiers": [
                             "command",
-                            "shift"
+                            "option"
                         ]
                     }
                 ]

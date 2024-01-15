@@ -2,7 +2,10 @@
   ":app": "cursor",
   ":manipulators": [
     "com-t:com-n",
-    "com-q:com-shift-open_bracket",
-    "com-e:com-shift-close_bracket",
+    "com-r:com-opt-f",
+    "com-b:ctrl-hyphen",
+    "com-1:shift-opt-f",
+    "com-q:com-opt-left_arrow",
+    "com-e:com-opt-right_arrow",
   ]
 }

@@ -3,6 +3,7 @@
   ":manipulators": [
     "com-t:com-n",
     "com-r:com-opt-f",
+    "com-b:ctrl-hyphen",
     "com-q:com-opt-left_arrow",
     "com-e:com-opt-right_arrow",
   ]

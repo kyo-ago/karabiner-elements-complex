@@ -1,91 +1,70 @@
 [
-    {
-        "manipulators": [
-            {
-                "type": "basic",
-                "conditions": [
-                    {
-                        "type": "frontmost_application_if",
-                        "bundle_identifiers": [
-                            "^com\\.jetbrains\\."
-                        ]
-                    }
-                ],
-                "from": {
-                    "key_code": "1",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ]
-                    }
-                },
-                "to": [
-                    {
-                        "key_code": "f",
-                        "modifiers": [
-                            "shift",
-                            "command"
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "basic",
-                "conditions": [
-                    {
-                        "type": "frontmost_application_if",
-                        "bundle_identifiers": [
-                            "^com\\.jetbrains\\."
-                        ]
-                    }
-                ],
-                "from": {
-                    "key_code": "o",
-                    "modifiers": {
-                        "mandatory": [
-                            "command"
-                        ]
-                    }
-                },
-                "to": [
-                    {
-                        "key_code": "o",
-                        "modifiers": [
-                            "control",
-                            "option"
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "basic",
-                "conditions": [
-                    {
-                        "type": "frontmost_application_if",
-                        "bundle_identifiers": [
-                            "^com\\.jetbrains\\."
-                        ]
-                    }
-                ],
-                "from": {
-                    "key_code": "q",
-                    "modifiers": {
-                        "mandatory": [
-                            "command",
-                            "shift"
-                        ]
-                    }
-                },
-                "to": [
-                    {
-                        "key_code": "f12",
-                        "modifiers": [
-                            "option"
-                        ]
-                    }
-                ]
-            }
+  {
+    "manipulators": [
+      {
+        "type": "basic",
+        "conditions": [
+          {
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["^com\\.jetbrains\\."]
+          }
         ],
-        "description": "jetbrains"
-    }
+        "from": {
+          "key_code": "1",
+          "modifiers": {
+            "mandatory": ["command"]
+          }
+        },
+        "to": [
+          {
+            "key_code": "f",
+            "modifiers": ["shift", "command"]
+          }
+        ]
+      },
+      {
+        "type": "basic",
+        "conditions": [
+          {
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["^com\\.jetbrains\\."]
+          }
+        ],
+        "from": {
+          "key_code": "o",
+          "modifiers": {
+            "mandatory": ["command"]
+          }
+        },
+        "to": [
+          {
+            "key_code": "o",
+            "modifiers": ["control", "option"]
+          }
+        ]
+      },
+      {
+        "type": "basic",
+        "conditions": [
+          {
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["^com\\.jetbrains\\."]
+          }
+        ],
+        "from": {
+          "key_code": "q",
+          "modifiers": {
+            "mandatory": ["command", "shift"]
+          }
+        },
+        "to": [
+          {
+            "key_code": "f12",
+            "modifiers": ["option"]
+          }
+        ]
+      }
+    ],
+    "description": "jetbrains"
+  }
 ]

@@ -1,16 +1,11 @@
 [
   {
     "description": "caps_lock",
-    ":manipulators": [
-      "*-caps_lock:left_gui"
-    ]
+    ":manipulators": ["*-caps_lock:left_gui"]
   },
   {
     "description": "japanese_kana-eisuu",
     ":device": "!barocco",
-    ":manipulators": [
-      "right_gui:japanese_kana",
-      "left_gui:japanese_eisuu"
-    ]
+    ":manipulators": ["right_gui:japanese_kana", "left_gui:japanese_eisuu"]
   }
 ]

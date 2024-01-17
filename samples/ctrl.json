@@ -21,9 +21,7 @@
   {
     "description": "finder",
     ":app": "finder",
-    ":manipulators": [
-      "return_or_enter:com-o",
-    ]
+    ":manipulators": ["return_or_enter:com-o"]
   },
   {
     "description": "ctrl-D",

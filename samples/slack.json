@@ -10,8 +10,8 @@
           "name": "left_shift pressed",
           "value": 1
         }
-      ],
-    },
+      ]
+    }
   },
   {
     "description": "shift*2 to set_variable",
@@ -46,7 +46,7 @@
             }
           }
         ]
-      },
-    },
-  },
+      }
+    }
+  }
 ]

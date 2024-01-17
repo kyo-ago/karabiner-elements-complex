@@ -1,0 +1,8 @@
+{
+    ":app": "terminal",
+    ":manipulators": [
+      "com-q:ctrl-shift-tab",
+      "com-e:ctrl-tab"
+    ]
+  }
+  

@@ -19,7 +19,7 @@
   "scripts": {
     "import-samples": "node dist/index.js --json samples",
     "build": "tsc",
-    "prettier": "prettier --write 'src/**/*.ts' 'tsconfig.json'",
+    "prettier": "prettier --write 'src/**/*.ts' 'src/*.ts' 'tsconfig.json' 'samples/*.json'",
     "test": "mocha",
     "test-update": "UPDATE_SNAPSHOT=1 mocha"
   }

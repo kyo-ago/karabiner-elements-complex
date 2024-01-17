@@ -10,8 +10,8 @@
           "name": "left_shift pressed",
           "value": 1
         }
-      ],
-    },
+      ]
+    }
   },
   {
     "description": "shift*2 to set_variable(only for chrome devtools source panel)",
@@ -46,13 +46,11 @@
             }
           }
         ]
-      },
-    },
+      }
+    }
   },
   {
     ":app": "chrome",
-    ":manipulators": [
-      "com-r:com-shift-t",
-    ],
-  },
+    ":manipulators": ["com-r:com-shift-t"]
+  }
 ]

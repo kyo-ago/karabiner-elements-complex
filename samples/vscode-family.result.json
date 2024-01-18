@@ -1,0 +1,239 @@
+[
+  {
+    "description": "shift*2 to cmd-p",
+    "manipulators": [
+      {
+        "conditions": [
+          {
+            "type": "variable_if",
+            "name": "left_shift pressed",
+            "value": 1
+          },
+          {
+            "type": "frontmost_application_if",
+            "bundle_identifiers": [
+              "^com\\.todesktop\\.230313mzl4w4u92$",
+              "^com\\.microsoft\\.VSCode$"
+            ]
+          }
+        ],
+        "type": "basic",
+        "from": {
+          "key_code": "left_shift",
+          "modifiers": {
+            "mandatory": [],
+            "optional": ["any"]
+          }
+        },
+        "to": [
+          {
+            "key_code": "p",
+            "modifiers": ["command"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "shift*2 to set_variable",
+    "manipulators": [
+      {
+        "to": [
+          {
+            "set_variable": {
+              "name": "left_shift pressed",
+              "value": 1
+            }
+          },
+          {
+            "key_code": "left_shift"
+          }
+        ],
+        "to_delayed_action": {
+          "to_if_invoked": [
+            {
+              "set_variable": {
+                "name": "left_shift pressed",
+                "value": 0
+              }
+            }
+          ],
+          "to_if_canceled": [
+            {
+              "set_variable": {
+                "name": "left_shift pressed",
+                "value": 0
+              }
+            }
+          ]
+        },
+        "type": "basic",
+        "conditions": [
+          {
+            "type": "frontmost_application_if",
+            "bundle_identifiers": [
+              "^com\\.todesktop\\.230313mzl4w4u92$",
+              "^com\\.microsoft\\.VSCode$"
+            ]
+          }
+        ],
+        "from": {
+          "key_code": "left_shift",
+          "modifiers": {
+            "mandatory": [],
+            "optional": ["any"]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "manipulators": [
+      {
+        "type": "basic",
+        "conditions": [
+          {
+            "type": "frontmost_application_if",
+            "bundle_identifiers": [
+              "^com\\.todesktop\\.230313mzl4w4u92$",
+              "^com\\.microsoft\\.VSCode$"
+            ]
+          }
+        ],
+        "from": {
+          "key_code": "t",
+          "modifiers": {
+            "mandatory": ["command"]
+          }
+        },
+        "to": [
+          {
+            "key_code": "n",
+            "modifiers": ["command"]
+          }
+        ]
+      },
+      {
+        "type": "basic",
+        "conditions": [
+          {
+            "type": "frontmost_application_if",
+            "bundle_identifiers": [
+              "^com\\.todesktop\\.230313mzl4w4u92$",
+              "^com\\.microsoft\\.VSCode$"
+            ]
+          }
+        ],
+        "from": {
+          "key_code": "r",
+          "modifiers": {
+            "mandatory": ["command"]
+          }
+        },
+        "to": [
+          {
+            "key_code": "f",
+            "modifiers": ["command", "option"]
+          }
+        ]
+      },
+      {
+        "type": "basic",
+        "conditions": [
+          {
+            "type": "frontmost_application_if",
+            "bundle_identifiers": [
+              "^com\\.todesktop\\.230313mzl4w4u92$",
+              "^com\\.microsoft\\.VSCode$"
+            ]
+          }
+        ],
+        "from": {
+          "key_code": "b",
+          "modifiers": {
+            "mandatory": ["command"]
+          }
+        },
+        "to": [
+          {
+            "key_code": "hyphen",
+            "modifiers": ["control"]
+          }
+        ]
+      },
+      {
+        "type": "basic",
+        "conditions": [
+          {
+            "type": "frontmost_application_if",
+            "bundle_identifiers": [
+              "^com\\.todesktop\\.230313mzl4w4u92$",
+              "^com\\.microsoft\\.VSCode$"
+            ]
+          }
+        ],
+        "from": {
+          "key_code": "1",
+          "modifiers": {
+            "mandatory": ["command"]
+          }
+        },
+        "to": [
+          {
+            "key_code": "f",
+            "modifiers": ["shift", "option"]
+          }
+        ]
+      },
+      {
+        "type": "basic",
+        "conditions": [
+          {
+            "type": "frontmost_application_if",
+            "bundle_identifiers": [
+              "^com\\.todesktop\\.230313mzl4w4u92$",
+              "^com\\.microsoft\\.VSCode$"
+            ]
+          }
+        ],
+        "from": {
+          "key_code": "q",
+          "modifiers": {
+            "mandatory": ["command"]
+          }
+        },
+        "to": [
+          {
+            "key_code": "left_arrow",
+            "modifiers": ["command", "option"]
+          }
+        ]
+      },
+      {
+        "type": "basic",
+        "conditions": [
+          {
+            "type": "frontmost_application_if",
+            "bundle_identifiers": [
+              "^com\\.todesktop\\.230313mzl4w4u92$",
+              "^com\\.microsoft\\.VSCode$"
+            ]
+          }
+        ],
+        "from": {
+          "key_code": "e",
+          "modifiers": {
+            "mandatory": ["command"]
+          }
+        },
+        "to": [
+          {
+            "key_code": "right_arrow",
+            "modifiers": ["command", "option"]
+          }
+        ]
+      }
+    ],
+    "description": "vscode-family"
+  }
+]

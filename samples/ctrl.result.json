@@ -180,7 +180,7 @@
         "conditions": [
           {
             "type": "frontmost_application_if",
-            "bundle_identifiers": ["^com\\.apple\\.finder"]
+            "bundle_identifiers": ["^com\\.apple\\.finder$"]
           }
         ],
         "from": {

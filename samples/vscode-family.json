@@ -53,6 +53,7 @@
     ":app": "vscode-family",
     ":manipulators": [
       "com-t:com-n",
+      "com-shift-t:shift-ctrl-grave_accent_and_tilde",
       "com-r:com-opt-f",
       "com-b:ctrl-hyphen",
       "com-1:shift-opt-f",

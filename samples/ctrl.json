@@ -44,15 +44,5 @@
       "*-cmd-up_arrow:page_up",
       "*-cmd-down_arrow:page_down"
     ]
-  },
-  {
-    "description": "arrow-key",
-    ":manipulators": [
-      "*-cmd-j:left_arrow",
-      "*-cmd-k:up_arrow",
-      "*-cmd-l:down_arrow",
-      "*-cmd-semicolon:right_arrow",
-      "*-cmd-quote:return_or_enter"
-    ]
   }
 ]

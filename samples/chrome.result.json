@@ -11,7 +11,10 @@
           },
           {
             "type": "frontmost_application_if",
-            "bundle_identifiers": ["^com\\.google\\.Chrome$"]
+            "bundle_identifiers": [
+              "^com\\.google\\.Chrome$",
+              "^company\\.thebrowser\\.Browser$"
+            ]
           }
         ],
         "type": "basic",
@@ -68,7 +71,10 @@
         "conditions": [
           {
             "type": "frontmost_application_if",
-            "bundle_identifiers": ["^com\\.google\\.Chrome$"]
+            "bundle_identifiers": [
+              "^com\\.google\\.Chrome$",
+              "^company\\.thebrowser\\.Browser$"
+            ]
           }
         ],
         "from": {
@@ -88,7 +94,10 @@
         "conditions": [
           {
             "type": "frontmost_application_if",
-            "bundle_identifiers": ["^com\\.google\\.Chrome$"]
+            "bundle_identifiers": [
+              "^com\\.google\\.Chrome$",
+              "^company\\.thebrowser\\.Browser$"
+            ]
           }
         ],
         "from": {

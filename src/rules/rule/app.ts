@@ -7,7 +7,7 @@ let conditionAppMap = {
     "^org\\.mozilla\\.firefox$",
     "^com\\.apple\\.Safari$",
   ],
-  chrome: ["^com\\.google\\.Chrome$"],
+  chrome: ["^com\\.google\\.Chrome$", "^company\\.thebrowser\\.Browser$"],
   jetbrains: ["^com\\.jetbrains\\."],
   "vscode-family": [
     "^com\\.todesktop\\.230313mzl4w4u92$",

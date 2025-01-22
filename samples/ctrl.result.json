@@ -222,7 +222,10 @@
         "conditions": [
           {
             "type": "frontmost_application_if",
-            "bundle_identifiers": ["^com\\.google\\.Chrome$"]
+            "bundle_identifiers": [
+              "^com\\.google\\.Chrome$",
+              "^company\\.thebrowser\\.Browser$"
+            ]
           }
         ],
         "from": {
@@ -302,86 +305,6 @@
         "to": [
           {
             "key_code": "page_down"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "description": "arrow-key",
-    "manipulators": [
-      {
-        "type": "basic",
-        "from": {
-          "key_code": "j",
-          "modifiers": {
-            "mandatory": ["command"],
-            "optional": ["any"]
-          }
-        },
-        "to": [
-          {
-            "key_code": "left_arrow"
-          }
-        ]
-      },
-      {
-        "type": "basic",
-        "from": {
-          "key_code": "k",
-          "modifiers": {
-            "mandatory": ["command"],
-            "optional": ["any"]
-          }
-        },
-        "to": [
-          {
-            "key_code": "up_arrow"
-          }
-        ]
-      },
-      {
-        "type": "basic",
-        "from": {
-          "key_code": "l",
-          "modifiers": {
-            "mandatory": ["command"],
-            "optional": ["any"]
-          }
-        },
-        "to": [
-          {
-            "key_code": "down_arrow"
-          }
-        ]
-      },
-      {
-        "type": "basic",
-        "from": {
-          "key_code": "semicolon",
-          "modifiers": {
-            "mandatory": ["command"],
-            "optional": ["any"]
-          }
-        },
-        "to": [
-          {
-            "key_code": "right_arrow"
-          }
-        ]
-      },
-      {
-        "type": "basic",
-        "from": {
-          "key_code": "quote",
-          "modifiers": {
-            "mandatory": ["command"],
-            "optional": ["any"]
-          }
-        },
-        "to": [
-          {
-            "key_code": "return_or_enter"
           }
         ]
       }

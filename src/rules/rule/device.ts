@@ -11,6 +11,10 @@ let conditionDeviceMap = {
     vendor_id: 1241,
     product_id: 323,
   },
+  baroccoMD770BT: {
+    vendor_id: 1241,
+    product_id: 1049,
+  },
   apple: {
     vendor_id: 1452,
     product_id: 629,

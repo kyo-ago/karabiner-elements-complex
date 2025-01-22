@@ -7,7 +7,7 @@
       ":from": "*-left_command",
       "to": [
         {
-            "shell_command": "osascript -e 'tell application \"Terminal\" to activate'"
+          "shell_command": "osascript -e 'tell application \"Terminal\" to activate'"
         }
       ],
       "conditions": [

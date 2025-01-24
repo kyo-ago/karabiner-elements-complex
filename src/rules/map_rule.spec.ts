@@ -50,10 +50,7 @@ describe("map_rule", () => {
           {
             conditions: [
               {
-                bundle_identifiers: [
-                  "^com\\.google\\.Chrome$",
-                  "^company\\.thebrowser\\.Browser$",
-                ],
+                bundle_identifiers: ["^com\\.google\\.Chrome$"],
                 type: "frontmost_application_if",
               },
             ],
@@ -80,10 +77,7 @@ describe("map_rule", () => {
           {
             conditions: [
               {
-                bundle_identifiers: [
-                  "^com\\.google\\.Chrome$",
-                  "^company\\.thebrowser\\.Browser$",
-                ],
+                bundle_identifiers: ["^com\\.google\\.Chrome$"],
                 type: "frontmost_application_if",
               },
             ],

@@ -1,0 +1,20 @@
+[
+  {
+    "description": "shift*2 to cmd-p(only for chrome devtools source panel)",
+    ":app": "arc",
+    ":manipulators": {
+      ":*-left_shift": "cmd-p",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "left_shift pressed",
+          "value": 1
+        }
+      ]
+    }
+  },
+  {
+    ":app": "arc",
+    ":manipulators": ["com-q:opt-com-up_arrow", "com-e:opt-com-down_arrow"]
+  }
+]
